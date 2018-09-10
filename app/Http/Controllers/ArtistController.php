@@ -84,7 +84,7 @@ class ArtistController extends Controller
 
         $selectartist = Artist::where('name', $request['artista'])->update($request->except('artista','_token'));
 
-        return index();
+        return $this->index();
     }
 
     /**
